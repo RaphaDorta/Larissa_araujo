@@ -5,7 +5,7 @@ function About() {
     <section className="sobre" id="sobre">
       <img
         className="sobre-foto"
-        src={`${import.meta.env.BASE_URL}img/absolutvision-smiley-2979107.jpg`}
+        src={`${import.meta.env.BASE_URL}img/larissa_retrato.jpg`}
         alt="Larissa Araujo, psicóloga"
       />
 

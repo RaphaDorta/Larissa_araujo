@@ -22,7 +22,7 @@ function Hero() {
 
       <img
         className="hero-imagem"
-        src={`${import.meta.env.BASE_URL}img/foto_consultorio.jpg`}
+        src={`${import.meta.env.BASE_URL}img/larissa_paisagem.png`}
         alt="Larissa Araujo, psicóloga"
       />
     </section>
