@@ -1,7 +1,8 @@
 :root {
-  --rosa-claro: #fdeceb;
-  --rosa: #fdd6d6;
-  --rosa-escuro: #e9a9a9;
+  --rosa-claro: #f2d8d3;
+  --rosa: #d99a8f;
+  --dourado: #d97b52;
+  --dourado-escuro: #b85f3e;
   --texto: #1a1a1a;
 }
 
@@ -9,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   background: linear-gradient(180deg, var(--rosa-claro), var(--rosa));
   position: sticky;
   top: 0;
@@ -26,10 +27,11 @@
 
 .marca-icone {
   display: block;
-  width: auto;
+  width: 230px;
   height: auto;
-  max-height: 80px;
+  max-height: 110px;
   object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(89, 48, 42, 0.18));
 }
 
 .marca-texto { display: flex; flex-direction: column; line-height: 1.1; }
@@ -59,21 +61,30 @@
   text-decoration: none;
 }
 
-.menu a:hover { color: var(--rosa-escuro); }
+.menu a:hover { color: var(--dourado-escuro); }
 
 .menu-botao {
-  border: 1px solid var(--texto);
+  border: 1px solid var(--dourado);
+  color: var(--dourado-escuro) !important;
   padding: 0.5rem 1.25rem;
   border-radius: 999px;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.menu-botao:hover { background: var(--texto); color: #fff !important; }
+.menu-botao:hover {
+  background: var(--dourado);
+  border-color: var(--dourado);
+  color: #fff !important;
+}
 
 /* celular: esconde o menu por enquanto e centraliza a marca */
 @media (max-width: 640px) {
   .header { justify-content: center; }
   .menu { display: none; }
+  .marca-icone {
+    width: 190px;
+    max-height: 100px;
+  }
 }
 
 .hero {
@@ -83,7 +94,7 @@
   gap: 2rem;
   padding: 4rem 2rem;
   min-height: 80vh;
-  background: #fdeceb;
+  background: var(--rosa-claro);
 }
 
 .hero h1 {
@@ -101,13 +112,28 @@
 }
 
 .hero-botao {
-  display: inline-block;
-  background: #25d366;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--dourado);
   color: #fff;
   padding: 0.9rem 1.8rem;
   border-radius: 999px;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero-botao:hover {
+  background: var(--dourado-escuro);
+  transform: translateY(-2px);
+}
+
+.whatsapp-icone {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+  flex: 0 0 auto;
 }
 
 .hero-imagem {
@@ -160,7 +186,7 @@
 
 .card-dor:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(233, 169, 169, 0.3);
+  box-shadow: 0 10px 24px rgba(189, 128, 118, 0.3);
 }
 
 .card-dor h3 {
@@ -200,7 +226,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--rosa-escuro);
+  color: var(--dourado-escuro);
 }
 
 .sobre h2 {
@@ -245,7 +271,7 @@
 
 .sobre-lista li::before {
   content: "•";
-  color: var(--rosa-escuro);
+  color: var(--dourado-escuro);
   position: absolute;
   left: 0;
 }
@@ -321,7 +347,7 @@
 
 .depoimentos {
   padding: 5rem 2rem;
-  background: #fff;
+  background: var(--rosa-claro);
   text-align: center;
 }
 
@@ -352,13 +378,13 @@
   border: 1px solid var(--rosa);
   border-radius: 16px;
   padding: 2rem 1.5rem;
-  background: var(--rosa-claro);
+  background: #fff;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .depoimento-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(233, 169, 169, 0.3);
+  box-shadow: 0 10px 24px rgba(189, 128, 118, 0.3);
 }
 
 .depoimento-texto {
@@ -375,12 +401,12 @@
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  color: var(--rosa-escuro);
+  color: var(--dourado-escuro);
 }
 
 .faq {
   padding: 5rem 2rem;
-  background: var(--rosa-claro);
+  background: #fff;
   text-align: center;
 }
 
@@ -434,7 +460,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.5rem;
-  color: var(--rosa-escuro);
+  color: var(--dourado-escuro);
   transition: transform 0.2s;
 }
 
@@ -453,8 +479,8 @@
 .footer {
   margin-top: auto;
   padding: 2rem;
-  background: var(--rosa-claro);
-  border-top: 1px solid var(--rosa);
+  background: var(--rosa);
+  border-top: 1px solid var(--dourado);
   text-align: center;
 }
 

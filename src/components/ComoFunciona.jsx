@@ -1,4 +1,5 @@
 import './style.css';
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const passos = [
   {
@@ -46,6 +47,7 @@ function ComoFunciona() {
         target="_blank"
         rel="noreferrer"
       >
+        <WhatsAppIcon />
         Quero agendar minha sessão
       </a>
     </section>

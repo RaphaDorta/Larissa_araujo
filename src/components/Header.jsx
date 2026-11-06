@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
       <a href="#inicio" className="marca">
-        <img src="/img/logo_Larissa-Araujo.png" alt="Psicóloga Larissa Araujo" className="marca-icone" />
+        <img src="/img/Larissa-Araujo-transparente.png" alt="Psicóloga Larissa Araujo" className="marca-icone" />
       </a>
 
       <nav className="menu">

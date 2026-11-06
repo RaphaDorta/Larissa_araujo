@@ -1,4 +1,5 @@
 import "./style.css";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 function Hero() {
   return (
@@ -14,6 +15,7 @@ function Hero() {
           target="_blank"
           rel="noreferrer"
         >
+          <WhatsAppIcon />
           Agende sua sessão pelo WhatsApp
         </a>
       </div>
