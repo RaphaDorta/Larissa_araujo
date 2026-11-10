@@ -12,7 +12,7 @@ const passos = [
     numero: "2",
     titulo: "A sessão",
     texto:
-      "Cada encontro tem duração de 50 minutos, em um ambiente seguro, acolhedor e sigiloso, presencial ou online.",
+      "Cada encontro tem duração de 50 minutos, em um ambiente seguro, acolhedor e sigiloso, e online.",
   },
   {
     numero: "3",
@@ -43,7 +43,7 @@ function ComoFunciona() {
 
       <a
         className="hero-botao"
-        href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Gostaria de agendar uma sessão."
+        href="https://wa.me/+5519992564445?text=Olá! Gostaria de agendar uma sessão."
         target="_blank"
         rel="noreferrer"
       >

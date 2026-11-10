@@ -12,7 +12,7 @@ function About() {
      <div className="sobre-texto">
         <span className="sobre-etiqueta">Sobre mim</span>
         <h2>Larissa Araujo</h2>
-        <p className="sobre-crp">Psicóloga · CRP 00/00000</p>
+        <p className="sobre-crp">Psicóloga · CRP 06/122782</p>
 
         <p>
           Sou psicóloga e assistente social, com uma trajetória profissional

@@ -10,8 +10,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 2rem;
-  background: linear-gradient(180deg, var(--rosa-claro), var(--rosa));
+  gap: 1.5rem;
+  padding: 0.65rem clamp(1rem, 4vw, 4rem);
+  background: var(--rosa-claro);
+  border-bottom: 1px solid var(--rosa);
+  box-shadow: 0 4px 20px rgba(89, 48, 42, 0.06);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -27,9 +30,9 @@
 
 .marca-icone {
   display: block;
-  width: 230px;
+  width: 190px;
   height: auto;
-  max-height: 110px;
+  max-height: 76px;
   object-fit: contain;
   filter: drop-shadow(0 1px 2px rgba(89, 48, 42, 0.18));
 }
@@ -53,38 +56,86 @@
 
 .menu { display: flex; align-items: center; gap: 1.5rem; }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  min-height: 44px;
+  border: 1px solid var(--dourado-escuro);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--texto);
+  font: inherit;
+  cursor: pointer;
+}
+
+.marca:focus-visible,
+.menu a:focus-visible,
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--texto);
+  outline-offset: 4px;
+}
+
+/* Reserva espaço para os títulos ao navegar sob o cabeçalho sticky. */
+section[id] {
+  scroll-margin-top: 7rem;
+}
+
 .menu a {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
   color: var(--texto);
   text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .menu a:hover { color: var(--dourado-escuro); }
 
 .menu-botao {
-  border: 1px solid var(--dourado);
-  color: var(--dourado-escuro) !important;
+  border: 1px solid var(--dourado-escuro);
+  background: var(--dourado-escuro);
+  color: #fff !important;
   padding: 0.5rem 1.25rem;
   border-radius: 999px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .menu-botao:hover {
-  background: var(--dourado);
-  border-color: var(--dourado);
+  background: #91472d;
+  border-color: #91472d;
   color: #fff !important;
 }
 
-/* celular: esconde o menu por enquanto e centraliza a marca */
-@media (max-width: 640px) {
-  .header { justify-content: center; }
-  .menu { display: none; }
-  .marca-icone {
-    width: 190px;
-    max-height: 100px;
+@media (max-width: 900px) {
+  .header { flex-wrap: wrap; gap: 0.5rem 1rem; }
+  .menu-toggle { display: inline-flex; }
+  .menu {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--rosa);
+    max-height: 65dvh;
+    overflow-y: auto;
   }
+  .menu-aberto { display: flex; }
+  .menu a { padding: 0.75rem 1rem; border-radius: 12px; }
+  .menu .menu-botao { justify-content: center; margin-top: 0.5rem; }
+  .marca-icone {
+    width: 155px;
+    max-height: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .menu a { transition: none; }
 }
 
 .hero {

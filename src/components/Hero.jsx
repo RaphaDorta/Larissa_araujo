@@ -11,7 +11,7 @@ function Hero() {
         </p>
         <a
           className="hero-botao"
-          href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Gostaria de agendar uma sessão."
+          href="https://wa.me/+5519992564445?text=Olá! Gostaria de agendar uma sessão."
           target="_blank"
           rel="noreferrer"
         >
